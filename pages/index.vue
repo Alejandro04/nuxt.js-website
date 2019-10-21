@@ -17,6 +17,7 @@ export default {
     axios.get(`${env.endpoint}/albums`).then((response) => {
       this.albums = response.data
     })
+    this.$store.commit('todos/session_type_change', 'nuevo dato al store')
   },
   components: {
     AlbumCard

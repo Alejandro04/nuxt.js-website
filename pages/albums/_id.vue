@@ -25,6 +25,8 @@ export default {
     axios.get(`${env.endpoint}/albums/${this.$route.params.id}/photos`).then((response) => {
       this.photos = response.data
     })
+    console.log('deberia imprimir abajo el store')
+    console.log(this.$store.state.todos.sessionType)
   },
   data () {
     return {
